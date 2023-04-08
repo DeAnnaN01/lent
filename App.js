@@ -8,7 +8,7 @@ export default function App() {
     return (
         <View style={styles.container}>
             <Text style={styles.titleName} > Lent Who? </Text>
-                <RecordsList key={index} record={record} />
+                <RecordsList />
             <StatusBar style="auto" />
         </View>
     );

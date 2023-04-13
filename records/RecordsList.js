@@ -1,15 +1,17 @@
 // RecordsList.js
 
 import React from 'react';
-import { RECORDS } from './RECORDS';
+import  {RECORDS}  from './RECORDS';
 import { ListItem, Avatar } from 'react-native-elements';
+import { View } from 'react-native-web';
 
 
-function RecordsList(RECORDS) {
-    <>
-        <View>
-            {
-                RECORDS.map((record, index) =>(
+export const RecordsList = (RECORDS) => {
+
+    RECORDS.map((record, index) => {
+        return (
+            <>
+                <View>
                     <ListItem key={index} bottomDivider>
                         <Avatar source={{uri: 'record.itemPic'}} />
                         <ListItem.Content>
@@ -22,13 +24,13 @@ function RecordsList(RECORDS) {
                             </ListItem.Subtitle>
                         </ListItem.Content>
                     </ListItem>
-                ) )
-            }
-        </View>
-    </>
-}
+                </View>
+            </>
+        );
+    }, [])
+        
+};
 
     
 
 
-export default RecordsList;
